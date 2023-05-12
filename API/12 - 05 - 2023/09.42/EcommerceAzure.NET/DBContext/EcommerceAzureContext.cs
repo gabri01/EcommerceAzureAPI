@@ -43,6 +43,7 @@ namespace DBContext
         public DbSet<spGetCategorieProdotto> spGetCategorieProdotto { get; set; }
         public DbSet<spInsertProduct> spInsertProduct { get; set; }
         public DbSet<spDeleteProduct> spDeleteProduct { get; set; }
+        public DbSet<spUpdateProduct> spUpdateProduct { get; set; }
 
         protected override void OnModelCreating(ModelBuilder ModelBuilder)
         {
@@ -81,6 +82,7 @@ namespace DBContext
             ModelBuilder.Entity<spGetCategorieProdotto>().HasNoKey();
             ModelBuilder.Entity<spInsertProduct>().Metadata.SetIsTableExcludedFromMigrations(true);
             ModelBuilder.Entity<spDeleteProduct>().Metadata.SetIsTableExcludedFromMigrations(true);
+            ModelBuilder.Entity<spUpdateProduct>().Metadata.SetIsTableExcludedFromMigrations(true);
             
         }
 

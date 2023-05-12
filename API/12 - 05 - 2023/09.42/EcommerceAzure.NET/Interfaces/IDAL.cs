@@ -18,5 +18,6 @@ namespace Interfaces
         public Task<List<Prodotto>> GetProdottiAsync(int From, int To);
         public Task<long> InsertProdottoAsync(TPRODOTTO Prodotto);
         public Task<long> DeleteProductAsync(long Id);
+        public Task<long> UpdateProductAsync(TPRODOTTO Prodotto);
     }
 }

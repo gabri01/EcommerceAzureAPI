@@ -99,5 +99,10 @@ namespace BusinessLogic
         {
             return await Dal.DeleteProductAsync(Id);
         }
+
+        public async Task<long> UpdateProductAsync(TPRODOTTO Prodotto)
+        {
+            return await Dal.UpdateProductAsync(Prodotto);
+        }
     }
 }

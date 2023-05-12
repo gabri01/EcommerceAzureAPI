@@ -167,9 +167,9 @@ namespace DataAccessLogic
                 },
             };
 
-            await Context.spInsertProduct.FromSqlRaw("EXECUTE spInsertProduct @Id, @Nome, @Quantita, @Prezzo, @Cod, @Img, @IdNegozio", SqlPrm).ToListAsync();
+            await Context.Database.ExecuteSqlRawAsync("EXECUTE spInsertProduct @Id OUTPUT, @Nome, @Quantita, @Prezzo, @Cod, @Img, @IdNegozio", SqlPrm);
 
-            return Prodotto.Id;
+            return (long)SqlPrm[0].Value;
         }
 
         public async Task<long> DeleteProductAsync(long Id)
@@ -184,9 +184,56 @@ namespace DataAccessLogic
                 }
             };
 
-            await Context.spDeleteProduct.FromSqlRaw("EXECUTE spDeleteProduct @Id", sqlPrm).ToListAsync();
+            await Context.Database.ExecuteSqlRawAsync("EXECUTE spInsertProduct @Id OUTPUT", sqlPrm);
 
             return Id;
+        }
+
+        public async Task<long> UpdateProductAsync(TPRODOTTO Prodotto)
+        {
+            SqlParameter[] SqlPrm = new[]
+            {
+                new SqlParameter
+                {
+                    ParameterName = "Id",
+                    SqlDbType = System.Data.SqlDbType.BigInt,
+                    Direction = System.Data.ParameterDirection.Output
+                },
+                new SqlParameter
+                {
+                    ParameterName = "Nome",
+                    Value = Prodotto.Nome,
+                    SqlDbType = System.Data.SqlDbType.NVarChar
+                },
+                new SqlParameter
+                {
+                    ParameterName = "Quantita",
+                    Value = Prodotto.Quantita,
+                    SqlDbType = System.Data.SqlDbType.Int
+                },
+                new SqlParameter
+                {
+                    ParameterName = "Prezzo",
+                    Value = Prodotto.Prezzo,
+                    SqlDbType = System.Data.SqlDbType.Float
+                },
+                new SqlParameter
+                {
+                    ParameterName = "Cod",
+                    Value = Prodotto.Cod,
+                    SqlDbType = System.Data.SqlDbType.Int
+                },
+                new SqlParameter
+                {
+                    ParameterName = "Img",
+                    Value = Prodotto.Img,
+                    SqlDbType = System.Data.SqlDbType.VarBinary
+                },
+            };
+
+            await Context.Database.ExecuteSqlRawAsync("EXECUTE spDeleteProduct @Id OUTPUT, @Nome, @Quantita, @Prezzo, @Cod, @Img", SqlPrm);
+
+            return Prodotto.Id;
         }
     }
 }

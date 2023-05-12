@@ -30,5 +30,13 @@ namespace API.Controllers
         {
             return Ok(await business.DeleteProductAsync(Id));
         }
+
+        [HttpPut]
+        [Route("Prodotti")]
+        [Authorize]
+        public async Task<IActionResult> Prodotto(TPRODOTTO Prodotto)
+        {
+            return Ok(await business.UpdateProductAsync(Prodotto));
+        }
     }
 }
