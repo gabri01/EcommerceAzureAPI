@@ -1,0 +1,25 @@
+div.form
+{
+    display: block;
+    text-align: center;
+}
+
+form{
+    border-style: double;
+    width: 25rem;
+    border-radius: 6px;
+    padding: 1rem;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    margin-bottom: 10rem;
+}
+
+.flexo{
+    width: 100%;
+}
+
+p{
+    font-size: 11px;
+}

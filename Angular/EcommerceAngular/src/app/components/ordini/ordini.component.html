@@ -1,0 +1,44 @@
+<app-navbar></app-navbar>
+<div class=" d-flex mt-4">
+<!-- DIVISORE -->
+<div class="col-2">
+</div>
+<ng-container>
+<div class="col">
+    <div class="d-flex justify-content-between">
+        <h2>I miei ordini:</h2>
+    <div class="search-container">
+        <input type="text" name="search" placeholder="Ricerca tutti gli ordini" class="search-input" (input)="($event)">
+        <a href="#" class="search-btn">
+        <i class="fas fa-search"></i></a>
+    </div>
+    </div>
+    <div class="card mt-4" *ngFor="let ordine of ordList">
+    <div class="p-2" style="display: flex; background-color: #EFF2F2; border-bottom:1px solid black;">
+        <div>
+            <p>ORDINE EFFETTUATO IL:</p>
+            <p></p>
+        </div>
+        <div style="position: relative; left: 10%;">
+            <p>TOTALE</p>
+            <p>{{ordine.costo}}€</p>
+        </div>  
+        <div style="position: relative; left: 20%;">
+            <p>Indirizzo:</p>
+            <p>{{ordine.indirizzo}}</p>
+        </div>  
+        <div class="" style="position: relative; left: 50%;">
+            <p>ORDINE ID: {{ordine.id}}</p>
+        </div>
+    </div>
+    <div class="p-2">
+        <h5>{{ordine.condizione}}</h5>
+        <p>{{ordine.note}}</p>
+    </div>
+</div>
+</div>
+<!-- DIVISORE -->
+<div class="col-2">
+</div>
+</ng-container>
+</div>

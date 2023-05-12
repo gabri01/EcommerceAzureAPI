@@ -1,0 +1,243 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+.navbar{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background-color: #131A22;
+}
+
+.nav-left, .nav-right{
+    height: 40px;
+    max-width: 20%;
+    display: flex;
+    padding: 0 0.4rem 0 1rem;
+}
+
+.nav-center{
+    width: 60%;
+    min-width: 200px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar{
+    width: 100%;
+    max-width: 800px;
+    height: 40px;
+}
+  
+  .search-bar form .inner-form {
+
+    background: #fff;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 40px;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-align: center;
+        align-items: center;
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+  }
+  
+  .search-bar form .inner-form .input-field {
+    line-height: 40px;
+  }
+  
+  .search-bar form .inner-form .input-field input {
+    height: 100%;
+    background: transparent;
+    border: 0;
+    display: block;
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .search-bar form .inner-form .input-field input.placeholder {
+    color: #888;
+    font-size: 16px;
+  }
+  
+  .search-bar form .inner-form .input-field input:-moz-placeholder {
+    color: #888;
+    font-size: 16px;
+  }
+  
+  .search-bar form .inner-form .input-field input::-webkit-input-placeholder {
+    color: #888;
+    font-size: 16px;
+  }
+  
+  .search-bar form .inner-form .input-field input:hover, .search-bar form .inner-form .input-field input:focus {
+    box-shadow: none;
+    outline: 0;
+    border-color: #fff;
+  }
+  
+  .search-bar form .inner-form .input-field.first-wrap {
+    min-width: 120px;
+    height: 40px;
+  }
+  
+  .search-bar form .inner-form .input-field.first-wrap .input-select select{
+    position: relative;
+    top:-1px;
+    padding: 0 2px;
+    height: 40px;
+    width: 100%;
+    font-size: 12px;
+    border: none;
+    border-right: 1px solid #9d9d9d;
+    color: #555;
+    background-color: #e2e2e2;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+
+  .search-bar form .inner-form .input-field.first-wrap .input-select select:hover{
+    cursor: pointer;
+    background-color: #b8b8b8;
+    color: #000000;
+  }
+
+  .search-bar form .inner-form .input-field.first-wrap .input-select select:focus{
+    outline: 3px solid #e2a600;
+  }
+
+  .search-bar form .inner-form .input-field.first-wrap .input-select select option{
+    background-color: #fff;
+    color: #000000;
+  }
+
+  .search-bar form .inner-form .input-field.second-wrap {
+    max-width: 640px;
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+  }
+  
+  .search-bar form .inner-form .input-field.third-wrap {
+    height: 40px;
+    min-width: 40px;
+  }
+  
+  .search-bar form .inner-form .input-field.third-wrap .btn-search {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    white-space: nowrap;
+    color: #fff;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border: 0;
+    cursor: pointer;
+    background: #ffbb01;
+    transition: all .2s ease-out, color .2s ease-out;
+  }
+  
+  .search-bar form .inner-form .input-field.third-wrap .btn-search svg {
+    color: #000000;
+    width: 20px;
+    
+  }
+  
+  .search-bar form .inner-form .input-field.third-wrap .btn-search:hover {
+    background: #e2a600;
+  }
+  
+  .search-bar form .inner-form .input-field.third-wrap .btn-search:focus {
+    outline: 0;
+    box-shadow: none;
+  }
+  
+  .cart .fa-cart-shopping, .user .fa-user{
+    position: relative;
+    color: #fff;
+    font-size: 30px;
+    padding: 5px 10px;
+    height: 40px;
+    width: 60px;
+    z-index: 1;
+  }
+
+  .fa-cart-shopping .item{
+    position: absolute;
+    color: #e46b00;
+    font-size: 13px;
+    margin-top: 2px;
+    margin-left: -18px;
+    
+  }
+
+  .user .fa-caret-down{
+    font-size: 12px;
+    position: absolute;
+    margin-left: -20px;
+    color: #fff;
+    line-height: 40px;
+    z-index: 0;
+  }
+ 
+  .cart .fa-cart-shopping:hover, .user .fa-user:hover {
+    outline: 2px solid #fff;
+  }
+
+  .dropdown-item{
+    position: relative;
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px;
+    z-index: 1;
+  }
+
+  .dropdown-item a:hover{
+    cursor: pointer;
+  }
+
+  .dropdown-item .btn{
+    height: 40px;
+    width: 200px;
+  }
+
+  .dropdown-item p{
+    font-size: 13px;
+  }
+
+  .dropdown-item .fa-caret-up{
+    top:-14px;
+    right: 6px;
+    position: absolute;
+    color: #ffffff;
+    font-size: 30px;
+  }
+
+  .shade{
+    overflow: hidden;
+    right: -6px;
+    top:0;
+    opacity: 0.4;
+    position: absolute;
+    width: 2000px;
+    height: 1017%;
+    background-color: #000000;
+    z-index: 0;
+  }
+
+  @media screen and (max-width: 992px) {
+
+  }
+  
+  @media screen and (max-width: 767px) {
+
+  }

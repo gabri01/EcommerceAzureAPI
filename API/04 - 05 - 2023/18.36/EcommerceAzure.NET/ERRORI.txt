@@ -1,0 +1,13 @@
+﻿1)
+😠
+Durante la migrazione (Update-Database):
+- L'introduzione del vincolo FOREIGN KEY 'FK_NEGOZIO_AZIENDA_IdAzienda' nella tabella
+'NEGOZIO' può determinare la creazione di cicli o più percorsi di propagazione.
+Specificare ON DELETE NO ACTION o ON UPDATE NO ACTION oppure modificare gli altri
+vincoli FOREIGN KEY. -
+
+😎
+SOLUZIONE (fornita da Lorenzo): https://stackoverflow.com/questions/63306882/specify-on-delete-no-action-or-on-update-no-action-or-modify-other-foreign-key
+
+---------------------------------------------------------------------------------------
+

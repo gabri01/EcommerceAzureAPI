@@ -1,0 +1,70 @@
+
+p{
+    font-size: 13px;
+    margin: 0;
+    line-height: 40px;
+}
+
+button{
+    font-weight: bold;
+    width: 100%;
+    border-radius: 0;
+    background-color: #485768;
+    color: white;
+}
+
+button:hover{
+    background-color: #56677b;
+    color: white;
+}
+
+a{
+    color: white;
+}
+
+.back1{
+    background-color: #222F3E;
+    color: white;
+    height: 30rem;
+    display: flex;
+}
+
+.back2{
+    background-color: #222F3E;
+    color: white;
+    height: 7.5rem;
+    text-align: center;
+}
+
+.back3{
+    background-color: #131A22;
+    color: white;
+    height: 8rem;
+    display: flex;
+}
+
+.back4{
+    background-color: #131A22;
+    color: white;
+    height: 6rem;
+    text-align: center;
+    width: 100%;
+}
+
+.divider{
+    width: 5rem;
+}
+
+.child{
+    flex-grow: 1;
+    margin-top: 3rem;
+}
+
+.child2{
+    flex-grow: 1;
+    margin-top: 0.5rem;
+}
+
+.desc{
+    color: grey;
+}

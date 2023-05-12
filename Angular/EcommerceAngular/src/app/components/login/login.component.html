@@ -1,0 +1,73 @@
+<div class="container mt-4">
+    <div class="mt-5" role="alert" *ngIf="userLogged">
+        <div class="alert alert-success">
+            <div class="text-center">Accesso effettuato:</div>
+            <div class="text-center">
+                Verrai reindirizzato alla pagina principale...
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="spinner-border" role="status"></div>
+        </div>
+    </div>
+    <div class="text-center">
+        <a href="javascript:;" title="Torna alla home" routerLink="../home">
+            <img src="../../../assets/img/logo-black.png" alt="" width="120px" height="60px" />
+        </a>
+    </div>
+    <br />
+    <div class="form">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" *ngIf="!userLogged">
+            <h4><b>Accedi</b></h4>
+            <!-- Email input -->
+            <label class="form-label" for="email"><b>Indirizzo e-mail</b></label>
+            <input type="text" id="email" class="form-control" formControlName="email" formControlName="email"
+                [ngClass]="{ 'is-invalid': submitted && f['email'].errors }" />
+            <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                <div *ngIf="f['email'].errors['required']">Email obbligatoria</div>
+                <div *ngIf="f['email'].errors['pattern']">Email non valida</div>
+            </div>
+            <br />
+
+            <!-- Password input -->
+            <label class="form-label" for="password"><b>La tua password</b></label>
+            <input type="password" id="password" class="form-control" formControlName="password"
+                placeholder="Almeno 8 caratteri" formControlName="password"
+                [ngClass]="{ 'is-invalid': submitted && f['password'].errors }" />
+            <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                <div *ngIf="f['password'].errors['required']">
+                    Password obbligatoria
+                </div>
+                <div *ngIf="f['password'].errors['minlength']">
+                    La password deve essere almeno di 8 caratteri
+                </div>
+                <div *ngIf="f['password'].errors['maxlength']">
+                    La password deve essere inferiore a 32 caratteri
+                </div>
+            </div>
+            <p>Le password devono essere composte almeno da 8 caratteri.</p>
+
+            <br />
+            <!-- Submit button -->
+            <div class="alert alert-danger text-center" *ngIf="loginError">
+                Credenziali errate
+            </div>
+            <button type="submit" class="btn btn-warning flexo">Continua</button>
+
+            <br /><br />
+            <p>
+                Accedendo al tuo account dichiari di aver letto e accetti integralmente
+                le nostre <a href="">Condizioni generali di uso e vendita</a>. Prendi
+                visione della nostra <a href="">Informativa sulla privacy</a>, della
+                nostra <a href="">Informativa sui Cookie</a> e della nostra
+                <a href="">Informativa sulla Pubblicità definita in base agli interessi</a>.
+            </p>
+        </form>
+        <br />
+        <br />
+        <p>Sei nuovo di Sadzon?</p>
+        <button type="submit" class="btn flexos" routerLink="../sign">
+            Crea il tuo account Sadzone
+        </button>
+    </div>
+</div>

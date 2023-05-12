@@ -1,0 +1,51 @@
+<div class="container mt-4">
+    <div class="text-center">
+        <a href="javascript:;" title="Torna alla home" routerLink="../home">
+            <img src="../../../assets/img/logo-black.png" alt="" width="120px" height="60px">
+        </a>
+    </div>
+    <br>
+    <div class="container form">
+        <form>
+            <h4><b>Creare Account</b></h4>
+            
+            <div class="row">
+                <div class="col d-flex">
+                    <div>
+                        <label class="form-label" for="nome"><b>Il tuo nome</b></label>
+                        <input type="text" id="nome" class="form-control" formControlName="nome">
+                    </div>
+                     <div>
+                        <label class="form-label" for="nome"><b>Il tuo cognome</b></label>
+                        <input type="text" id="nome" class="form-control" formControlName="nome">
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <label class="form-label" for="telefono"><b>Il tuo numero</b></label>
+            <input type="text" id="telefono" class="form-control" formControlName="telefono">
+            <br>
+
+            <label class="form-label" for="cf"><b>Il tuo codice fiscale</b></label>
+            <input type="text" id="cf" class="form-control" formControlName="cf">
+            <br>
+
+            <label class="form-label" for="email"><b>La tua mail</b></label>
+            <input type="text" id="email" class="form-control" formControlName="email">
+            <br>
+
+            <label class="form-label" for="password"><b>La tua password</b></label>
+            <input type="text" id="password" class="form-control" formControlName="password" placeholder="Almeno 6 caratteri">
+            <p>Le password devono essere composte almeno da 6 caratteri.</p>
+
+            <br>
+            <button type="submit" class="btn btn-warning flexo">Continua</button>
+
+            <br><br>
+            <p> Registrandoti dichiari di aver letto e accetti integralmente le nostre <a href="">Condizioni generali di uso e vendita</a>. Prendi visione della nostra <a href="">Informativa sulla privacy</a>, della nostra <a href="">Informativa sui Cookie</a> e della nostra <a href="">Informativa sulla Pubblicità definita in base agli interessi</a>.</p>
+        
+            <p>Disponi già di un account <a href="javascript:;" routerLink="../login">Accedi</a></p>
+        </form>
+    </div>
+</div>
